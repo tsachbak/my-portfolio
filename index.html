@@ -19,7 +19,56 @@
   </head>
 
   <body>
-    <header></header>
+    <header class="bg-white shadow fixed w-full top-0 z-50">
+      <div class="w-full mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-4xl font-bold text-blue-600">Tsach Olshevizky</div>
+
+        <!-- Burger Btn for Mobile -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-2xl text-gray-600 focus:outline-none"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Mobile Navigation -->
+        <div
+          id="mobileMenu"
+          class="absolute top-full left-0 w-full bg-blue-400 shadow-md rounded-b-lg hidden flex-col items-start px-4 py-4 space-x-4 z-40 md:hidden animate-dropdown"
+        >
+          <a
+            href="#about"
+            class="text-gray-800 font-semibold hover:text-blue-600"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-800 font-semibold hover:text-blue-600"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-800 font-semibold hover:text-blue-600"
+            >Contact</a
+          >
+        </div>
+
+        <!-- Desktop Navifation -->
+        <nav id="desktopMenu" class="space-x-6 hidden md:block">
+          <a href="#about" class="text-gray-600 font-bold hover:text-blue-600"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-700 font-bold hover:text-blue-600"
+            >Projects</a
+          >
+          <a href="#contact" class="text-gray-700 font-bold hover:text-blue-600"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
     <main>
       <!-- Hero Section -->
       <section
@@ -64,5 +113,7 @@
       <section></section>
     </main>
     <footer></footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
