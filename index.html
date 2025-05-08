@@ -110,7 +110,6 @@
               <i class="fab fa-github"></i>
             </a>
           </div>
-
           <a
             href="./assets/Resume Tsach Olshevizky_no_pic_14_01_25.pdf"
             target="_blank"
@@ -133,13 +132,15 @@
             <div
               class="w-full md:w-1/3 flex flex-col items-center md:items-start gap-6"
             >
+              <!-- profile image -->
               <img
                 src="pictures/profile_pic/profile_pic_2.png"
                 alt="Profile Picture"
                 class="w-56 h-56 object-cover shadow-lg"
               />
 
-              <div class="flex gap-4">
+              <!-- icons -->
+              <div class="flex gap-4 items-center">
                 <a
                   href="https://www.facebook.com/tsach.olshevizky"
                   target="_blank"
@@ -154,6 +155,82 @@
                 >
                   <i class="fab fa-instagram text-6xl text-pink-500"></i>
                 </a>
+                <!-- Skills PopUp -->
+                <div class="relative">
+                  <button
+                    id="skillsBtn"
+                    class="hover:scale-110 transition p-0 m-0 leading-none"
+                    title="Show Skills"
+                  >
+                    <i class="fas fa-code text-6xl text-black"></i>
+                  </button>
+                  <div
+                    id="skillsPopup"
+                    class="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white shadow-lg rounded-lg p-4 border w-80 z-50 hidden"
+                  >
+                    <h3 class="text-md font-semibold mb-3 text-center">
+                      Technologies I Use
+                    </h3>
+                    <div
+                      class="flex flex-wrap justify-center gap-3 text-3xl text-gray-700"
+                    >
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full shadow"
+                        title="C# / .NET"
+                      >
+                        <i class="fab fa-microsoft text-blue-700"></i>
+                      </div>
+
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full shadow"
+                        title="JavaScript"
+                      >
+                        <i class="fab fa-js text-yellow-400"></i>
+                      </div>
+
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full shadow"
+                        title="HTML5"
+                      >
+                        <i class="fab fa-html5 text-orange-600"></i>
+                      </div>
+
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full shadow"
+                        title="CSS3"
+                      >
+                        <i class="fab fa-css3-alt text-blue-500"></i>
+                      </div>
+
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full shadow"
+                        title="React"
+                      >
+                        <i class="fab fa-react text-cyan-400"></i>
+                      </div>
+
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full shadow"
+                        title="Linux"
+                      >
+                        <i class="fab fa-linux"></i>
+                      </div>
+
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full shadow"
+                        title="Git"
+                      >
+                        <i class="fab fa-git-alt text-red-600"></i>
+                      </div>
+                    </div>
+                    <button
+                      id="closePopUp"
+                      class="mt-6 text-sm text-blue-600 hover:underline block mx-auto"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
 
