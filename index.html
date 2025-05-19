@@ -119,65 +119,76 @@
               <i class="fab fa-github"></i>
             </a>
           </div>
-          <a
-            href="./assets/Resume Tsach Olshevizky_no_pic_14_01_25.pdf"
-            target="_blank"
-            class="inline-flex items-center bg-white text-black font-semibold px-5 py-2 rounded shadow hover:bg-gray-100"
+          <div
+            class="flex flex-col sm:flex-row sm:justify-start gap-4 mt-4 w-full max-w-md"
           >
-            <i class="fas fa-file-alt mr-2"></i> SEE MY RESUME
-          </a>
-          <button
-            id="hireMeBtn"
-            class="inline-flex items-center bg-white text-black font-semibold px-5 py-2 rounded shadow hover:bg-gray-100"
-          >
-            HIRE ME
-          </button>
+            <a
+              href="./assets/Resume Tsach Olshevizky_no_pic_14_01_25.pdf"
+              target="_blank"
+              class="sm:order-1 w-full sm:w-auto bg-white text-black font-semibold px-5 py-2 rounded shadow hover:bg-gray-100 text-center"
+            >
+              <i class="fas fa-file-alt mr-2"></i> SEE MY RESUME
+            </a>
+            <button
+              id="hireMeBtn"
+              class="sm:order-2 w-full sm:w-auto bg-white text-black font-semibold px-5 py-2 rounded shadow hover:bg-gray-100"
+            >
+              HIRE ME
+            </button>
+          </div>
         </div>
 
         <!-- Hire Me -->
+        <!-- Modal Background -->
         <div
           id="hireMeModal"
-          class="hidden bg-white p-6 rounded-md shadow-md w-11/12 max-w-md relative"
+          class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden"
         >
-          <!-- Close Btn -->
-          <button
-            id="closeHireMeModal"
-            class="absolute top-2 Right-2 text-gray-500 hover-text-red-500 text-xl"
+          <!-- Modal Box -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-md relative mx-4"
           >
-            &times;
-          </button>
-          <h2 class="text-2xl font-bold mb-4">Hire Me</h2>
-
-          <form id="hireMeForm" class="space-y-4">
-            <input
-              id="name"
-              type="text"
-              placeholder="Your Name"
-              class="w-full p-2 border border-gray-300 rounded text-black"
-              required
-            />
-            <input
-              id="email"
-              type="email"
-              placeholder="Your Email"
-              class="w-full p-2 border border-gray-300 rounded text-black"
-              required
-            />
-            <textarea
-              id="message"
-              placeholder="Your Message"
-              class="w-full p-2 border border-gray-300 rounded text-black"
-              rows="4"
-              required
-            ></textarea>
+            <!-- Close Btn -->
             <button
-              type="submit"
-              class="bg-blue-500 text-white px-4 py-2 rounded"
+              id="closeHireMeModal"
+              class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-2xl"
             >
-              Send
+              &times;
             </button>
-            <div id="formStatus" class="text-sm mt-2"></div>
-          </form>
+
+            <h2 class="text-2xl font-bold mb-4 text-center">Hire Me</h2>
+
+            <form id="hireMeForm" class="space-y-4">
+              <input
+                id="name"
+                type="text"
+                placeholder="Your Name"
+                class="w-full p-2 border border-gray-300 rounded text-black"
+                required
+              />
+              <input
+                id="email"
+                type="email"
+                placeholder="Your Email"
+                class="w-full p-2 border border-gray-300 rounded text-black"
+                required
+              />
+              <textarea
+                id="message"
+                placeholder="Your Message"
+                class="w-full p-2 border border-gray-300 rounded text-black"
+                rows="4"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                class="bg-blue-500 text-white px-4 py-2 rounded w-full"
+              >
+                Send
+              </button>
+              <div id="formStatus" class="text-sm mt-2 text-center"></div>
+            </form>
+          </div>
         </div>
       </section>
       <!-- About Section -->
@@ -691,6 +702,61 @@
                 >View on GitHub</a
               >
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Me Section -->
+      <section id="contact" class="bg-white py-4 text-gray-800">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-2xl font-bold mb-6">Contact Me</h2>
+          <div class="space-y-4 text-md">
+            <!-- Phone -->
+            <p>
+              <a
+                href="https://wa.me/972545585205?text=Hello%20Tsach,%20I%20saw%20your%20portfolio%20and%20wanted%20to%20chat!"
+                target="_blank"
+                class="text-blue-600 hover:underline"
+              >
+                <i class="fab fa-whatsapp text-green-500 mr-1"></i>
+                +972-54-558-5205
+              </a>
+            </p>
+            <!-- Email -->
+            <p>
+              <a
+                href="mailto:tsachbak9@gmail.com"
+                class="text-blue-600 hover:underline"
+              >
+                <i class="fas fa-envelope text-red-500 mr-1"></i>
+                tsachbak9@gmail.com
+              </a>
+            </p>
+            <!-- Location -->
+            <p>
+              <a
+                href="https://www.google.com/maps?q=Tel+Aviv+Israel"
+                target="_blank"
+                class="text-blue-600 hover:underline"
+              >
+                📍 Tel Aviv, Israel
+              </a>
+            </p>
+          </div>
+          <div class="flex justify-center gap-4 mt-4">
+            <a
+              href="https://www.linkedin.com/in/tsach-olshevizky-55766b172/"
+              target="_blank"
+              class="text-blue-600 text-3xl hover:scale-110 transition"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/tsachbak"
+              target="_blank"
+              class="text-gray-800 text-3xl hover:scale-110 transition"
+            >
+              <i class="fab fa-github"></i>
+            </a>
           </div>
         </div>
       </section>
