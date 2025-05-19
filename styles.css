@@ -1,3 +1,8 @@
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
+
 @keyframes dropdown {
   0% {
     opacity: 0;
