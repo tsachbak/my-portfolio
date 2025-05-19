@@ -37,8 +37,9 @@ function setupHireMeModal() {
   const hireMeModal = document.getElementById("hireMeModal");
   const closeHireMeModal = document.getElementById("closeHireMeModal");
   const formStatus = document.getElementById("formStatus");
+  const floatingHireMeBtn = document.getElementById("floatingHireMeBtn");
 
-  if (hireMeBtn && hireMeModal && closeHireMeModal) {
+  if (hireMeBtn && hireMeModal && closeHireMeModal && floatingHireMeBtn) {
     hireMeBtn.addEventListener("click", () => {
       hireMeModal.classList.remove("hidden");
 
@@ -53,8 +54,20 @@ function setupHireMeModal() {
       }
     });
 
+    floatingHireMeBtn.addEventListener("click", () => {
+      hireMeBtn.click();
+    });
+
     closeHireMeModal.addEventListener("click", () => {
       hireMeModal.classList.add("hidden");
+    });
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        floatingHireMeBtn.classList.remove("hidden");
+      } else {
+        floatingHireMeBtn.classList.add("hidden");
+      }
     });
   }
 }
