@@ -86,13 +86,18 @@ function setupHireMeForm() {
       const message = document.getElementById("message").value.trim();
 
       try {
-        const response = await fetch("https://localhost:7111/api/ContactMe", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ name, email, message }),
-        });
+        // Uncomment the line below to use the local server
+        //const response = await fetch("https://localhost:7111/api/ContactMe", {
+        const response = await fetch(
+          "https://myportfolioserver-aijq.onrender.com/api/ContactMe",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, email, message }),
+          }
+        );
 
         if (response.ok) {
           status.textContent = "Message sent successfully!";
