@@ -76,6 +76,7 @@ function setupHireMeModal() {
 function setupHireMeForm() {
   const form = document.getElementById("hireMeForm");
   const status = document.getElementById("formStatus");
+  const spinner = document.getElementById("spinner");
 
   if (form && status) {
     form.addEventListener("submit", async (event) => {
@@ -85,10 +86,18 @@ function setupHireMeForm() {
       const email = document.getElementById("email").value.trim();
       const message = document.getElementById("message").value.trim();
 
+      //show spinner and clear status
+      if (spinner) {
+        spinner.classList.remove("hidden");
+      }
+      status.textContent = "";
+      status.className = "";
+
       try {
-        // Uncomment the line below to use the local server
-        //const response = await fetch("https://localhost:7111/api/ContactMe", {
         const response = await fetch(
+          //local server
+          //"https://localhost:7111/api/ContactMe",
+          //render server
           "https://myportfolioserver-aijq.onrender.com/api/ContactMe",
           {
             method: "POST",
@@ -111,6 +120,11 @@ function setupHireMeForm() {
       } catch (error) {
         status.textContent = `Failed to send message: ${error}`;
         status.className = "mt-2 text-sm text-red-600";
+      } finally {
+        // Hide spinner
+        if (spinner) {
+          spinner.classList.add("hidden");
+        }
       }
     });
   }
